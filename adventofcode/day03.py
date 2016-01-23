@@ -23,8 +23,8 @@ class Day3(object):
                     yield (0, 1)
 
     @staticmethod
-    def _add_coords(a, b):
-        return (a[0] + b[0], a[1] + b[1])
+    def _add_coords((x1, y1), (x2, y2)):
+        return x1 + x2, y1 + y2
 
     def part1(self):
         all_coords = util.accumulate(self._get_moves(), self._add_coords)
@@ -38,7 +38,7 @@ class Day3(object):
                     lambda (x, y): x % 2 == 0,
                     enumerate(all_moves)
             )
-        ]
+            ]
 
         santa_coords = util.accumulate(santa_moves, self._add_coords)
         robo_coords = util.accumulate(robo_moves, self._add_coords)
