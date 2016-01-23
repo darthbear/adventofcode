@@ -16,10 +16,9 @@ class Day2(object):
             side1 = l * w
             side2 = w * h
             side3 = h * l
-            return 2 * l * w + 2 * w * h + 2 * h * l + min(side1, side2, side3)
+            return 2 * (side1 + side2 + side3) + min(side1, side2, side3)
 
-        dimensions = self._get_dimensions()
-        total_surface = sum((get_surface(*dimension) for dimension in dimensions))
+        total_surface = sum((get_surface(*dimension) for dimension in self._get_dimensions()))
         return total_surface
 
     def part2(self):
@@ -28,8 +27,7 @@ class Day2(object):
             m1, m2 = sorted([l, w, h])[:2]
             return 2 * (m1 + m2) + l * w * h
 
-        dimensions = self._get_dimensions()
-        total_ribbon = sum((get_ribbon_surface(*dimension) for dimension in dimensions))
+        total_ribbon = sum((get_ribbon_surface(*dimension) for dimension in self._get_dimensions()))
         return total_ribbon
 
 

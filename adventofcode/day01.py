@@ -17,14 +17,12 @@ class Day1(object):
         moves = self._get_moves()
         final_floor = sum(moves)
         return final_floor
-        print 'Part1: {response}'.format(response=final_floor)
 
     def part2(self):
         moves = self._get_moves()
         floors = util.accumulate(moves)
         position = next((pos for pos, f in enumerate(floors) if f == -1), None)
         return position
-        print 'Part2: {response}'.format(response=position)
 
 
 def main():
