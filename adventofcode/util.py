@@ -35,3 +35,8 @@ def filterfalse(predicate, iterable):
     for x in iterable:
         if not predicate(x):
             yield x
+
+
+def slide(window_size, iterable):
+    l = list(iterable)
+    return (l[i: i + window_size] for i in xrange(len(l) - window_size + 1))
