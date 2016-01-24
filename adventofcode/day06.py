@@ -89,7 +89,7 @@ class Day6(object):
 def main():
     input_file = sys.argv[1]
     day6 = Day6(input_file)
-    # print 'Part1: {solution}'.format(solution=day6.part1())
+    print 'Part1: {solution}'.format(solution=day6.part1())
     print 'Part2: {solution}'.format(solution=day6.part2())
 
 
