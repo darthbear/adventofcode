@@ -5,7 +5,7 @@ import itertools
 import util
 
 
-class Day4(object):
+class Day5(object):
     VOWELS = 'aeiou'
     DISALLOWED_SUBSTRINGS = ['ab', 'cd', 'pq', 'xy']
 
@@ -70,9 +70,9 @@ class Day4(object):
 
 def main():
     input_file = sys.argv[1]
-    day4 = Day4(input_file)
-    print 'Part1: {solution}'.format(solution=day4.part1())
-    print 'Part2: {solution}'.format(solution=day4.part2())
+    day5 = Day5(input_file)
+    print 'Part1: {solution}'.format(solution=day5.part1())
+    print 'Part2: {solution}'.format(solution=day5.part2())
 
 
 if __name__ == '__main__':
